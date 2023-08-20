@@ -38,4 +38,24 @@
                                            "when": "editorTextFocus && inputFocus && vim.mode != 'Insert'" },
     { "key": "shift+tab",               "command": "workbench.action.previousEditorInGroup", 
                                            "when": "editorTextFocus && inputFocus && vim.mode != 'Insert'" },
+
+    { "key": "alt+b",                   "command": "workbench.action.toggleSidebarVisibility" },
+    { "key": "ctrl+b",                  "command": "-workbench.action.toggleSidebarVisibility" },
+
+    { "key": "ctrl+j",                  "command": "selectNextSuggestion",
+                                           "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+    { "key": "ctrl+k",                  "command": "selectPrevSuggestion",
+                                           "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+
+    { "key": "alt+f",                  "command": "actions.find",
+                                           "when": "editorFocus || editorIsOpen" },
+    { "key": "ctrl+f",                  "command": "-actions.find",
+                                           "when": "editorFocus || editorIsOpen" },
+
+    { "key": "shift+alt+f",             "command": "-editor.action.formatDocument",
+                                           "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" },
+    { "key": "shift+alt+f",             "command": "-editor.action.formatDocument.none",
+                                           "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly" },
+    { "key": "shift+alt+f",             "command": "workbench.action.findInFiles" },
+    { "key": "ctrl+shift+f",             "command": "-workbench.action.findInFiles" },
 ]

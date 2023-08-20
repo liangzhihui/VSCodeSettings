@@ -1,17 +1,17 @@
 {
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Gruvbox Dark Soft",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.statusBar.visible": true,
     "editor.fontSize": 14,
     "editor.lineHeight": 1.2,
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "MesloLGS NF",
     "editor.minimap.enabled": false,
     "debug.onTaskErrors": "showErrors",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
 
     "terminal.integrated.defaultProfile.osx": "zsh",
-    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
 
     "csharp.referencesCodeLens.enabled": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
@@ -52,10 +52,11 @@
         "<C-f>": false,
         "<C-n>": false,
         "<C-p>": false,
+        "<C-c>": false,
     },
     "vim.ignorecase": true,
     "vim.enableNeovim": true,
-    "vim.neovimPath": "/opt/homebrew/bin/nvim",
+    "vim.neovimPath": "D:\\Program Files\\Neovim",
     "vim.normalModeKeyBindings": [
         { "before": ["Z", "Z"], "commands": [":wq"] },
         { "before": ["<C-j>"], "after": ["<C-w>", "j"] },
@@ -86,6 +87,9 @@
         { "before": ["<space>", "t"], "commands": ["search.action.openNewEditorToSide"], "silent": true },
         { "before": ["<space>", "b"], "commands": ["bookmarks.list"], "silent": true },
         { "before": ["<space>", "z"], "commands": ["workbench.action.toggleZenMode"], "silent": true },
+
+        { "before": ["u"], "commands": ["undo"] },
+        { "before": ["<C-r>"], "commands": ["redo"] }
     ],
     "vim.insertModeKeyBindings": [
         { "before": ["<C-j>"], "after": ["<C-o>", "<C-w>", "j"] },
@@ -98,7 +102,10 @@
     ],
     "files.associations": {
         "*.meta": "json",
-        "*.json": "jsonc"
+        "*.json": "jsonc",
+        "*.lua.txt": "lua",
+        "*.prefab": "yaml",
+        "*.anim": "yaml"
     },
     "eslint.enable": true,
     "eslint.run": "onType",
@@ -117,4 +124,28 @@
     "eslint.workingDirectories": [
         { "mode": "auto" }
     ],
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 4,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.inlineSuggest.enabled": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "extensions.autoUpdate": false,
+    "git.openRepositoryInParentFolders": "never",
+    "emmylua.lint.codeStyle": false,
+    "emmylua.lint.spellCheck": false,
+    "emmylua.typecheck.defineTypeCanReceiveNilType": true,
+    "emmylua.hint.varargHint": false,
+    "emmylua.hint.paramHint": false,
+    "security.workspace.trust.untrustedFiles": "open",
 }
