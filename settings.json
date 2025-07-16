@@ -2,6 +2,9 @@
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.statusBar.visible": true,
+    "workbench.activityBar.orientation": "vertical",
+    "workbench.sideBar.location": "right",
+    "workbench.iconTheme": "material-icon-theme",
     "editor.fontSize": 14,
     "editor.lineHeight": 1.2,
     "editor.fontFamily": "MesloLGS NF",
@@ -9,8 +12,10 @@
     "debug.onTaskErrors": "showErrors",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.autoReveal": false,
 
     "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.fontFamily": "MesloLGS NF",
 
     "csharp.referencesCodeLens.enabled": false,
@@ -124,7 +129,10 @@
     "eslint.workingDirectories": [
         { "mode": "auto" }
     ],
+    "editor.inlineSuggest.enabled": true,
     "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
@@ -133,12 +141,14 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "editor.inlineSuggest.enabled": true,
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[yaml]": {
+        "diffEditor.ignoreTrimWhitespace": true
     },
     "extensions.autoUpdate": false,
     "git.openRepositoryInParentFolders": "never",
