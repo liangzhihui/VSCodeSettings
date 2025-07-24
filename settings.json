@@ -5,8 +5,8 @@
     "workbench.activityBar.orientation": "vertical",
     "workbench.sideBar.location": "right",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontSize": 14,
-    "editor.lineHeight": 1.2,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 1.1,
     "editor.fontFamily": "MesloLGS NF",
     "editor.minimap.enabled": false,
     "debug.onTaskErrors": "showErrors",
@@ -74,6 +74,7 @@
         { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"], "silent": true },
         { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"], "silent": true },
         { "before": ["g", "r"], "commands": ["editor.action.goToReferences"], "silent": true },
+        { "before": ["g", "R"], "commands": ["references-view.findReferences"], "silent": true },
         { "before": ["[", "g"], "commands": ["editor.action.marker.prev"], "silent": true },
         { "before": ["]", "g"], "commands": ["editor.action.marker.next"], "silent": true },
         { "before": ["<S-k>"], "commands": ["editor.action.showHover"], "silent": true },
@@ -81,6 +82,7 @@
         { "before": ["<leader>", "2"], "commands": [":nohl"], "silent": true },
         { "before": ["<leader>", "o"], "commands": ["workbench.action.closeOtherEditors"], "silent": true },
         { "before": ["<leader>", "<leader>", "o"], "commands": ["workbench.action.closeEditorsInOtherGroups"], "silent": true },
+        { "before": ["<leader>", "<leader>", "f"], "commands": ["workbench.files.action.showActiveFileInExplorer"], "silent": true },
         { "before": ["<leader>", "q"], "commands": ["workbench.action.closeEditorInAllGroups"], "silent": true },
         { "before": ["<leader>", "r", "n"], "commands": ["editor.action.rename"], "silent": true },
         { "before": ["<leader>", "f", "i"], "commands": ["editor.action.quickFix"], "silent": true },
@@ -94,7 +96,8 @@
         { "before": ["<space>", "z"], "commands": ["workbench.action.toggleZenMode"], "silent": true },
 
         { "before": ["u"], "commands": ["undo"] },
-        { "before": ["<C-r>"], "commands": ["redo"] }
+        { "before": ["<C-r>"], "commands": ["redo"] },
+        { "before": ["g", "f"], "commands": [""]}
     ],
     "vim.insertModeKeyBindings": [
         { "before": ["<C-j>"], "after": ["<C-o>", "<C-w>", "j"] },
@@ -158,4 +161,7 @@
     "emmylua.hint.varargHint": false,
     "emmylua.hint.paramHint": false,
     "security.workspace.trust.untrustedFiles": "open",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
